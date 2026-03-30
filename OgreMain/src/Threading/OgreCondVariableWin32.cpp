@@ -1,4 +1,4 @@
-/*
+﻿/*
 -----------------------------------------------------------------------------
 This source file is part of OGRE
     (Object-oriented Graphics Rendering Engine)
@@ -26,10 +26,9 @@ THE SOFTWARE.
 -----------------------------------------------------------------------------
 */
 
-#ifdef _WIN32
+#include "OgreStableHeaders.h"
 
-#    include "Threading/OgreCondVariable.h"
-
+#include "Threading/OgreCondVariable.h"
 namespace Ogre
 {
     CondVariable::CondVariable()
@@ -62,5 +61,3 @@ namespace Ogre
     //-----------------------------------------------------------------------------------
     void CondVariable::notifyAll( void ) { WakeAllConditionVariable( &mCondVariable ); }
 }  // namespace Ogre
-
-#endif

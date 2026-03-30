@@ -28,6 +28,8 @@ THE SOFTWARE.
 
 #include "OgreStableHeaders.h"
 
+#if OGRE_NO_FREEIMAGE == 0
+
 #include "OgreFreeImageCodec2.h"
 
 #include "OgreDataStream.h"
@@ -700,3 +702,5 @@ namespace Ogre
         }
     }
 }  // namespace Ogre
+
+#endif

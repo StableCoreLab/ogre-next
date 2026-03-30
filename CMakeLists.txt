@@ -21,7 +21,10 @@ cmake_policy(SET CMP0003 NEW)
 if(CMAKE_VS_PLATFORM_NAME STREQUAL "Tegra-Android")
 	set(CMAKE_LINK_LIBRARY_FLAG "")
 endif()
-
+if(NOT OGRE_DEPENDENCIES_DIR)
+  set(OGRE_DEPENDENCIES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../FreeImage/Dist/x64" CACHE PATH
+      "Path to OGRE dependencies" FORCE)
+endif()
 #fix Policy CMP0072 is not set
 set(OpenGL_GL_PREFERENCE LEGACY)
 

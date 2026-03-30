@@ -354,7 +354,7 @@ endif ()
 if (OGRE_CONFIG_ENABLE_FREEIMAGE)
   list(APPEND HEADER_FILES include/OgreFreeImageCodec2.h)
   list(APPEND SOURCE_FILES src/OgreFreeImageCodec2.cpp)
-  list(APPEND LIBRARIES    "${FreeImage_LIBRARIES}")
+  list(APPEND LIBRARIES    ${FreeImage_LIBRARIES})
 endif()
 
 if (OGRE_CONFIG_ENABLE_STBI)
